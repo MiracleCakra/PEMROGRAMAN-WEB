@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Position CSS</title>
+        <link rel="stylesheet" href="stylePosition.css" type="text/css">
+</head>
+
+    <body>
+
+        <h2>position: static</h2>
+
+        <p>
+            Position static digunakan untuk mengatur element menjadi statis secara default.
+            Elemen akan mengikuti posisi normal secara default,
+            elemen tidak akan dipengaruhi oleh properti seperti top, bottom, left, dan right.
+        </p>
+
+        <div class="static">
+            Elemen ini diatur menggunakan posisi: static;
+        </div>
+        <br><br><br><br>
+        <h2>position : relative;</h2>
+        
+        <p>Sebuah element HTML yang menggunakan position relative akan terletak pada posisi normal.
+            Mengatur properti atas, kanan, bavah, dan kiri dari elemen yang diposisikan dengan "retatif"
+            akan membuatnya jauh dari posiSi normalnya.
+            Konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalkan Oleh elemen tersebut.
+        </p>
+
+        <div class ="relative">
+            Elemen ini diatur menggunakan posisi: relative;
+        </div>
+        <br><br><br>
+        <h2>position: fixed</h2>
+
+        <p>Sebuah element HTML yang di setting dengan position fixed akan memiliki sifat tetap,
+            tanpa ada perubahan bahkan jika halaman website di scroll.
+            Berlaku pengaturan left, bottom, top dan right pada position fixed:</p>
+
+        <div class="fixed">
+            Elemen ini diatur menggunakan posisi: fixed
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+        <h2>position: absolute</h2>
+
+        <p>Element HTML yang menggunakan position absolute akan diposisikan relatif dengan
+            element lain yang mendahuluinya yang terdekat,
+            bukan relatif terhadap layar secara normal.:</p>
+
+        <div class="relative1">Elemen ini diatur menggunakan posisi: relative;
+            <div class="absolute">Elemen ini diatur menggunakan posisi: absolute;</div>
+        </div>
+
+        <br><br><br>
+        <br><br><br>
+
+        <h2>position: sticky;</h2>
+
+        <p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja.</p>
+        <p>Catatan: IE/Edge 15 dan versi yang kebih lama tidak mendukung sticky.</p>
+
+        <div class="sticky">Hola AKu adalah sticky!</div>
+
+        <div style="padding-bottom: 200px;">
+
+            <p>Dalam contoh ini, elemen sticky menenpel pada posisi paling atas halanan (top:0),
+                ketika mencapai posisi scrollnya</p>
+            <p>Cobalah untuk melakukan scroll.</p>
+            <p>Coba untuk melakukan scroll..
+                Nunc pretium augue porttitor risus porta tincidunt. Aenean scelerisque tellus ac porta vulputate. Donec eget risus maximus, posuere tellus ac, faucibus mi. Donec ut odio vitae eros rhoncus tincidunt a id ligula. Morbi cursus nec odio ut pretium. Pellentesque eget viverra risus. Nam vulputate rhoncus malesuada. In ac volutpat orci. Vestibulum risus mauris, rhoncus a facilisis at, scelerisque ut leo. Donec imperdiet eget leo quis eleifend. Phasellus aliquam augue turpis, lobortis mollis nulla eleifend id. Sed et tempus ante. Quisque ac odio lectus. Phasellus pharetra sed lectus at gravida. Nullam malesuada vestibulum tortor, sit amet scelerisque risus vulputate ut.</p>
+            <p>Cobalah untuk melakukan scroll..
+                Nunc pretium augue porttitor risus porta tincidunt. Aenean scelerisque tellus ac porta vulputate. Donec eget risus maximus, posuere tellus ac, faucibus mi. Donec ut odio vitae eros rhoncus tincidunt a id ligula. Morbi cursus nec odio ut pretium. Pellentesque eget viverra risus. Nam vulputate rhoncus malesuada. In ac volutpat orci. Vestibulum risus mauris, rhoncus a facilisis at, scelerisque ut leo. Donec imperdiet eget leo quis eleifend. Phasellus aliquam augue turpis, lobortis mollis nulla eleifend id. Sed et tempus ante. Quisque ac odio lectus. Phasellus pharetra sed lectus at gravida. Nullam malesuada vestibulum tortor, sit amet scelerisque risus vulputate ut.</p>
+            
+        </div>
+    </body>
+
+</html>
