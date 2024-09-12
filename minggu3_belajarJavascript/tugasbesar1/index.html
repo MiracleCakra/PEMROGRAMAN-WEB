@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Tugas besar 1</title>
+    <script src="tugas.js" defer></script>
+    <link rel="stylesheet" href="tugas.css" />
+    <style>
+        .checkbox-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .checkbox-container label {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return cekForm()">
+        <label for="nama">Nama</label>
+        <div class="form-group">
+            <input type="text" name="nama" id="nama" />
+        </div>
+        <label for="alamat">Alamat</label>
+        <div class="form-group">
+            <textarea name="alamat" id="alamat"></textarea>
+        </div>
+        <label for="tanggal_lahir">Tanggal Lahir</label>
+        <div class="form-group">
+            <input type="date" name="tanggal_lahir" id="tanggal_lahir" />
+        </div>
+        <div class="form-group">
+            <span>Jenis Kelamin:</span>
+            <div class="radio">
+                <input type="radio" name="jenis_kelamin" value="laki-laki" id="laki-laki" />
+                <label for="laki-laki">Laki-Laki</label>
+                <input type="radio" name="jenis_kelamin" value="perempuan" id="perempuan" />
+                <label for="perempuan">Perempuan</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="hobby">Hobby:</label>
+            <div class="checkbox-container">
+                <input type="checkbox" name="hobby" value="gaming" id="gaming" />
+                <label for="gaming">Gaming</label>
+                <input type="checkbox" name="hobby" value="futsal" id="futsal" />
+                <label for="futsal">Futsal</label>
+                <input type="checkbox" name="hobby" value="belajar" id="belajar" />
+                <label for="belajar">Belajar</label>
+            </div>
+        </div>
+        <label for="pekerjaan">Pekerjaan:</label>
+        <div class="checkbox-container">
+            <input type="radio" name="pekerjaan" value="guru" id="guru" />
+            <label for="guru">Guru</label>
+            <input type="radio" name="pekerjaan" value="mahasiswa" id="mahasiswa" />
+            <label for="mahasiswa">Mahasiswa</label>
+            <input type="radio" name="pekerjaan" value="tentara" id="tentara" />
+            <label for="tentara">Tentara</label>
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="checkbox" name="check" value="true" id="check" />
+            <label for="check">Ceklis jika anda setuju untuk mengirimkan data!</label>
+        </div>
+        <div class="box">
+            <div class="box-submit">
+                <input type="submit" value="Submit" />
+            </div>
+            <div class="box-reset">
+                <input type="reset" value="reset" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
