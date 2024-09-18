@@ -58,4 +58,12 @@ $a /= $b;
 echo "Variabel a /=: {$a} <br>";
 $a %= $b;
 echo "Variabel a %=: {$a} <br>";
+
+echo "<br><br>";
+
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+
+echo "Hasil Identik:"; var_dump($hasilIdentik); echo" <br>";
+echo "Hasil Tidak Identik:"; var_dump($hasilTidakIdentik); echo" <br>";
 ?>
