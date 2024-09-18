@@ -59,4 +59,52 @@ foreach ($nilaiSiswa as $nilai) {
         continue;
     }else echo "Nilai: $nilai (Lulus)<br>";
 }
+
+echo "<br><br>";
+
+// pertanyaan percobaan 4.6
+
+echo "Pertanyaan percobaan 4.6<br>";
+
+$nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+$n = count($nilaiSiswa);
+$temp; $isSwapped;
+
+// Bubble sort untuk mengurutkan nilai
+for($i = 0; $i < $n-1; $i++) {
+    $isSwapped = false;
+
+    for($j = 0; $j < $n-$i-1; $j++) {
+        if($nilaiSiswa[$j] > $nilaiSiswa[$j+1]) {
+            $temp = $nilaiSiswa[$j];
+            $nilaiSiswa[$j] = $nilaiSiswa[$j+1];
+            $nilaiSiswa[$j+1] = $temp;
+            $isSwapped = true;
+        }
+    }
+
+    if(!$isSwapped) {
+        break;
+    }
+}
+
+echo "Setelah sorted <br>";
+for ($i = 0; $i < count($nilaiSiswa); $i++) {
+    echo "Nilai: $nilaiSiswa[$i]<br>";
+}
+
+// Mengabaikan dua nilai tertinggi dan dua nilai terendah
+$jumlahNilai = 0;
+$jumlahSiswaYangDihitung = 0;
+for ($i = 2; $i <= 7; $i++) {
+    $jumlahNilai += $nilaiSiswa[$i];
+    $jumlahSiswaYangDihitung++;
+}
+
+$rataRata = $jumlahNilai / $jumlahSiswaYangDihitung;
+echo "Rata-rata: ".$rataRata."<br>";
 ?>
+
+
+
+
