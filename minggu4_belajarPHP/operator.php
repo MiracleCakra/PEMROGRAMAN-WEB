@@ -33,4 +33,16 @@ echo "Hasil Lebih Kecil: {$hasilLebihKecil} <br>";
 echo "Hasil Lebih Besar: {$hasilLebihBesar} <br>";
 echo "Hasil Lebih Kecil Sama: {$hasilLebihKecilSama} <br>";
 echo "Hasil Lebih Besar Sama: {$hasilLebihBesarSama} <br>";
+
+echo "<br><br>";
+
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+
+echo "Hasil And: "; var_dump($hasilAnd); echo "<br>";
+echo "Hasil Or: "; var_dump($hasilOr); echo "<br>";
+echo "Hasil Not A: "; var_dump($hasilNotA); echo "<br>";
+echo "Hasil Not B: "; var_dump($hasilNotB); echo "<br>";
 ?>
