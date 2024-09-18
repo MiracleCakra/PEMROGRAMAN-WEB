@@ -103,6 +103,24 @@ for ($i = 2; $i <= 7; $i++) {
 
 $rataRata = $jumlahNilai / $jumlahSiswaYangDihitung;
 echo "Rata-rata: ".$rataRata."<br>";
+
+echo "<br><br>";
+
+// pertanyaan percobaan 4.7
+echo "Pertanyaan percobaan 4.7<br>";
+
+$jumlahHargaCustomer = 120000;
+$totalSetelahDiskon;
+$diskon = 0.2;
+
+if ($jumlahHargaCustomer >= 100000) {
+    $totalSetelahDiskon = $jumlahHargaCustomer - ($diskon * $jumlahHargaCustomer);
+} else {
+    $totalSetelahDiskon = $jumlahHargaCustomer;
+}
+
+echo "Total sebelum diskon: Rp " . number_format($jumlahHargaCustomer, 0, ',', '.') . "<br>";
+echo "Total setelah diskon: Rp " . number_format($totalSetelahDiskon, 0, ',', '.') . "<br>";
 ?>
 
 
