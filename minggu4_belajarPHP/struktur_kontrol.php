@@ -121,6 +121,25 @@ if ($jumlahHargaCustomer >= 100000) {
 
 echo "Total sebelum diskon: Rp " . number_format($jumlahHargaCustomer, 0, ',', '.') . "<br>";
 echo "Total setelah diskon: Rp " . number_format($totalSetelahDiskon, 0, ',', '.') . "<br>";
+
+echo "<br><br>";
+
+// pertanyaan percobaan 4.8
+echo "Pertanyaan percobaan 4.8<br>";
+
+$poin = 550; // Contoh poin yang dikumpulkan oleh pemain
+$hadiahTambahan = ($poin > 500) ? "YA" : "TIDAK";
+
+echo "Total skor pemain adalah: " . $poin . "<br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? " . $hadiahTambahan . "<br>";
+
+echo "<br>";
+// Poin kedua
+$poin2 = 300; // Contoh poin yang dikumpulkan oleh pemain
+$hadiahTambahan2 = ($poin2 > 500) ? "YA" : "TIDAK";
+
+echo "Total skor pemain adalah: " . $poin2 . "<br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? " . $hadiahTambahan2 . "<br>";
 ?>
 
 
