@@ -57,4 +57,25 @@ echo "Daftar nilai mahasiswa dalam mata kuliah $mataKuliah: <br>";
 
 foreach ($daftarNilai[$mataKuliah] as $nilai) {
     echo "Nama: {$nilai[0]}, Nilai: {$nilai[1]} <br>";}
+
+    //pertanyaan percobaan no 5.4
+
+    $siswa = [
+        ["nama" => "Alice", "nilai" => 85],
+        ["nama" => "Bob", "nilai" => 92],
+        ["nama" => "Charlie", "nilai" => 78],
+        ["nama" => "David", "nilai" => 64],
+        ["nama" => "Eva", "nilai" => 90]
+    ];
+    
+    // Menghitung rata-rata nilai
+    $totalNilai = 0;
+    foreach ($siswa as $data) {
+        $totalNilai += $data["nilai"];
+    }
+    $rataRata = $totalNilai / 5;
+    
+    // Menampilkan rata-rata nilai
+    echo "Rata-rata nilai kelas adalah: $rataRata\n";
+
 ?>
