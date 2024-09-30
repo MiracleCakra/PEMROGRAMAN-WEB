@@ -33,12 +33,16 @@ $menu = [
     ],
 ];
 
-function tampilkanMenuBertingkat (array $menu) {
+function tampilkanMenuBertingkat(array $menu) {
     echo "<ul>";
-    foreach ($menu as $key => $item) {
-    echo "<li>{$item['nama']}</li>";
+    foreach ($menu as $item) {
+        echo "<li>{$item['nama']}</li>";
+        if (isset($item['subMenu'])) {
+            tampilkanMenuBertingkat($item['subMenu']);
+        }
     }
     echo "</ul>";
 }
-    tampilkanMenuBertingkat($menu);
-    ?>
+
+tampilkanMenuBertingkat($menu);
+?>
