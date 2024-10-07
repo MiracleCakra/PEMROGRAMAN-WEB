@@ -31,15 +31,26 @@ echo $new_text; // Output: "I like banana pie."
 // echo "Cocokkan: " . $matches[0];
 // } else {
 // echo "Tidak ada yang cocok!";
-//}
+// }
 
-//perubahan pada langkah 14
+//perubahan pada langkah 14 5.5
+// echo "<br><br>";
+// $pattern = '/go?d/'; // Cocokkan "gd" atau "god" saja.
+// $text = 'god is good. ';
+// if (preg_match($pattern, $text, $matches)) {
+//     echo "Cocokkan: " . $matches[0];
+// } else {
+//     echo "Tidak ada yang cocok!";
+// }
+
+//perubahan pada langkah 14 5.6
 echo "<br><br>";
-$pattern = '/go?d/'; // Cocokkan "gd" atau "god" saja.
-$text = 'god is good. ';
+$pattern = '/go{1,3}d/';
+$text = 'god is good and goood is even better.';
 if (preg_match($pattern, $text, $matches)) {
     echo "Cocokkan: " . $matches[0];
 } else {
     echo "Tidak ada yang cocok!";
 }
+
 ?>
