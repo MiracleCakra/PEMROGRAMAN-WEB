@@ -24,12 +24,22 @@ $new_text = preg_replace($pattern, $replacement, $text);
 echo $new_text; // Output: "I like banana pie."
 
 
+// echo "<br><br>";
+// $pattern = '/go*d/'; // Cocokkan "god", "good", "gooood", dll.
+// $text = 'god is good. ';
+// if (preg_match($pattern, $text, $matches)) {
+// echo "Cocokkan: " . $matches[0];
+// } else {
+// echo "Tidak ada yang cocok!";
+//}
+
+//perubahan pada langkah 14
 echo "<br><br>";
-$pattern = '/go*d/'; // Cocokkan "god", "good", "gooood", dll.
+$pattern = '/go?d/'; // Cocokkan "gd" atau "god" saja.
 $text = 'god is good. ';
 if (preg_match($pattern, $text, $matches)) {
-echo "Cocokkan: " . $matches[0];
+    echo "Cocokkan: " . $matches[0];
 } else {
-echo "Tidak ada yang cocok!";
+    echo "Tidak ada yang cocok!";
 }
 ?>
