@@ -6,7 +6,7 @@
     </head>
     <body>
         <h2>Form Input PHP</h2>
-        <form method="post" action="proses_form. php">
+        <form method="post" action="proses_form.php">
             <label for="nama">Nama: </label>
             <input type="text" name="nama" id="nama"
 
