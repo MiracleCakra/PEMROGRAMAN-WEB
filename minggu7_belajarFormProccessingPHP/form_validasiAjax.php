@@ -11,9 +11,13 @@
         <input type="text" id="nama" name="nama">
         <span id="nama-error" style="color: red;"></span><br><br>
 
-        <label for="email">Email :</label>
+        <label for="email">Email : </label>
         <input type="text" id="email" name="email">
         <span id="email-error" style="color: red;"></span><br><br>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password">
+        <span id="password-error" style="color: red;"></span><br><br>
 
         <input type="submit" value="Submit">
     </form>
@@ -23,13 +27,13 @@
     <script>
         $(document).ready(function() {
             $("#myForm").submit(function(event) {
-                event.preventDefault(); // Mencegah form dari submit secara default
+                event.preventDefault();
 
                 var nama = $("#nama").val();
                 var email = $("#email").val();
+                var password = $("#password").val();
                 var valid = true;
 
-                // Validasi nama
                 if (nama === "") {
                     $("#nama-error").text("Nama harus diisi.");
                     valid = false;
@@ -37,7 +41,6 @@
                     $("#nama-error").text("");
                 }
 
-                // Validasi email
                 if (email === "") {
                     $("#email-error").text("Email harus diisi.");
                     valid = false;
@@ -45,18 +48,28 @@
                     $("#email-error").text("");
                 }
 
-                // Jika validasi berhasil, kirim data menggunakan AJAX
+                if (password === "") {
+                    $("#password-error").text("Password harus diisi.");
+                    valid = false;
+                } else if (password.length < 8) {
+                    $("#password-error").text("Password harus minimal 8 karakter.");
+                    valid = false;
+                } else {
+                    $("#password-error").text("");
+                }
+
                 if (valid) {
                     $.ajax({
                         url: "proses_validasi.php",
                         type: "POST",
                         data: {
                             nama: nama,
-                            email: email
+                            email: email,
+                            password: password
                         },
                         success: function(response) {
                             $("#result").html(response);
-                            $("#myForm")[0].reset(); // Reset form setelah berhasil submit
+                            $("#myForm")[0].reset();
                         },
                         error: function(xhr, status, error) {
                             $("#result").html("Terjadi kesalahan: " + error);
