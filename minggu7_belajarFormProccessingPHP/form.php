@@ -16,4 +16,4 @@
                 <input type="submit" name="submit" value="Submit">
         </form>
     </body>
-    </htm1>
+    </html>
