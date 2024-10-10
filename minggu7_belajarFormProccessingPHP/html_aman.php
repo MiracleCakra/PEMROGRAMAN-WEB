@@ -1,42 +1,27 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-    <title>Form Input PHP</title>
-</head>
-
 <body>
-    <h2>Form Input PHP</h2>
     <?php
-    // Inisialisasi variabel
-    $namaErr = "";
-    $nama = "";
-    $dataValid = "";
-
+    $input = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Validasi nama (memastikan nama tidak kosong)
-        if (empty($_POST["nama"])) {
-            $namaErr = "Nama harus diisi!";
-        } else {
-            $nama = trim($_POST["nama"]);
-            $dataValid = "Data nama berhasil diinput";
-        }
+        $input = $_POST['input'];
+        $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+
+        echo "$input <br><br>";
     }
     ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="nama">Nama: </label>
-        <input type="text" name="nama" id="nama" value="<?php echo htmlspecialchars($nama); ?>">
-        <span class="error"><?php echo $namaErr; ?></span><br><br>
+        <label for="input">Nama :</label>
+        <input type="text" name="input" id="input">
+        <br><br>
 
-        <input type="submit" name="submit" value="Submit">
+        <br>
+
+        <input type="submit">
     </form>
 
-    <?php
-    if (!empty($dataValid)) {
-        echo "<p>" . htmlspecialchars($dataValid) . "</p>";
-    }
-    ?>
-</body>
+    <br><br>
 
+</body>
 </html>
