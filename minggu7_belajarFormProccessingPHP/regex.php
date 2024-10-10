@@ -34,9 +34,8 @@ echo $new_text; // Output: "I like banana pie."
 // }
 
 //perubahan pada langkah 14 5.5
-// echo "<br><br>";
-// $pattern = '/go?d/'; // Cocokkan "gd" atau "god" saja.
-// $text = 'god is good. ';
+// $pattern = '/go?d/';
+// $text = 'good for god. ';
 // if (preg_match($pattern, $text, $matches)) {
 //     echo "Cocokkan: " . $matches[0];
 // } else {
@@ -46,7 +45,7 @@ echo $new_text; // Output: "I like banana pie."
 //perubahan pada langkah 14 5.6
 echo "<br><br>";
 $pattern = '/go{1,3}d/';
-$text = 'god is good and goood is even better.';
+$text = 'good for god.';
 if (preg_match($pattern, $text, $matches)) {
     echo "Cocokkan: " . $matches[0];
 } else {
