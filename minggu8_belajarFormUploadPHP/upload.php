@@ -1,34 +1,19 @@
 <?php
 if (isset($_POST["submit"])) {
-    $targetdir = "uploads/";
+    $targetdir = "uploads/"; //Direktori tujuan untuk menyimpan file
     $targetfile = $targetdir . basename($_FILES["myfile"]["name"]);
-    $imageFileType = strtolower(pathinfo($targetfile, PATHINFO_EXTENSION));
+    $fileType = strtolower(pathinfo($targetfile, PATHINFO_EXTENSION));
 
-    // Cek apakah file adalah gambar
-    $validExtensions = ["jpg", "jpeg", "png", "gif"];
-    if (in_array($imageFileType, $validExtensions) && getimagesize($_FILES["myfile"]["tmp_name"])) {
+    $allowedExtensions = array("txt", "pdf", "doc", "docx");
+    $maxsize = 3 * 1024 * 1024;
+
+    if (in_array($fileType, $allowedExtensions) && $_FILES["myfile"]["size"] <= $maxsize) {
         if (move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetfile)) {
-            echo "File berhasil diunggah.<br>";
-
-            // Membuat thumbnail
-            $thumb_width = 200;
-            list($width, $height) = getimagesize($targetfile);
-            $thumb_height = ($height / $width) * $thumb_width;
-
-            $thumb = imagecreatetruecolor($thumb_width, $thumb_height);
-            $source = imagecreatefromstring(file_get_contents($targetfile));
-
-            imagecopyresized($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
-            
-            $thumb_file = $targetdir . "thumb_" . basename($_FILES["myfile"]["name"]);
-            imagejpeg($thumb, $thumb_file);
-
-            echo "<img src='$thumb_file' alt='Thumbnail'>";
+            echo "File berhasil diunggah";
         } else {
             echo "Gagal mengunggah file.";
         }
     } else {
-        echo "File harus berupa gambar (JPG, JPEG, PNG, GIF).";
+        echo "File tidak valid atau melebihi ukuran maksimum yang diizinkan";
     }
 }
-?>
