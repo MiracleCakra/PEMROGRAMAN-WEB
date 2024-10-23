@@ -31,20 +31,6 @@ header {
     border-bottom: 3px solid #4f46e5;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
 h1, h2 {
     text-align: center;
     color: #4f46e5;

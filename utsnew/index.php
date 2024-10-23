@@ -13,8 +13,8 @@
                 <h1>Cakra Play Station</h1>
             </div>
         </nav>
-    
     </header>
+    
     <section id="home" class="home">
         <div class="home-content">
             <h2>Selamat Datang di Cakra Play Station</h2>
