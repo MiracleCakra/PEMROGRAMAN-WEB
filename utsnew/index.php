@@ -46,7 +46,7 @@
                 <p>Sewa: Rp20.000/jam</p>
             </div>
         </div>
-        <a href="form.php?produk=PS" class="order-button">Pesan Sekarang</a>
+        <a href="form.php?produk=PS" class="order-button">BOOKING NOW</a>
     </div>
 </section>
 
