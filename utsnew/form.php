@@ -67,7 +67,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sewa dan Jual PS. Semua Hak Dilindungi.</p>
+            <p>&copy;Sewa dan Jual PS Cakra. Semua Hak Dilindungi.</p>
         </div>
     </footer>
 </body>
