@@ -67,7 +67,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy;Sewa dan Jual PS Cakra. Semua Hak Dilindungi.</p>
+            <p>&copy;Cakra Play station.All rights reserved.</p>
         </div>
     </footer>
 </body>
