@@ -42,14 +42,13 @@ if ($stmt === false) {
         <!-- Loop untuk menampilkan setiap baris data dari database -->
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <tr>
-
-                <td><?php echo $row['judul_buku']; ?></td>
-                <td><?php echo $row['deskripsi']; ?></td>
-                <td><?php echo number_format($row['harga'], 0, ',', '.'); ?></td>
-                <td><?php echo $row['stok']; ?></td>
+                <td><?php echo htmlspecialchars($row['judul_buku']); ?></td>
+                <td><?php echo htmlspecialchars($row['deskripsi']); ?></td>
+                <td><?php echo htmlspecialchars(number_format($row['harga'], 0, ',', '.')); ?></td>
+                <td><?php echo htmlspecialchars($row['stok']); ?></td>
                 <td class="Format Buku">
-                    <a href="editbuku.php?id=<?php echo $row['id_buku']; ?>" class="btn-edit">Edit</a>
-                    <a href="hapusbuku.php?id=<?php echo $row['id_buku']; ?>" class="btn-delete"
+                    <a href="editbuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>" class="btn-edit">Edit</a>
+                    <a href="hapusbuku.php?id=<?php echo htmlspecialchars($row['id_buku'] ); ?>" class="btn-delete"
                     onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</a>
                 </td>
             </tr>

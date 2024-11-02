@@ -61,31 +61,40 @@ try {
    <link rel="stylesheet" href="editbuku.css">
 </head>
 <body>
-   <div class="container">
-       <h2>Edit Buku</h2>
-       <form method="POST">
-           <div class="form-group">
-               <label>Judul Buku:</label>
-               <!-- Input field judul dengan value dari database & XSS prevention -->
-               <input type="text" name="judul" value="<?php echo htmlspecialchars($buku['judul_buku']); ?>" required>
-           </div>
-           <div class="form-group">
-               <label>Deskripsi:</label>
-               <!-- Textarea untuk deskripsi dengan value dari database & XSS prevention -->
-               <textarea name="deskripsi" required><?php echo htmlspecialchars($buku['deskripsi']); ?></textarea>
-           </div>
-           <div class="form-group">
-               <label>Harga:</label>
-               <input type="number" name="harga" value="<?php echo htmlspecialchars($buku['harga']); ?>" required>
-           </div>
-           <div class="form-group">
-               <label>Stok:</label>
-               <input type="number" name="stok" value="<?php echo htmlspecialchars($buku['stok']); ?>" required>
-           </div>
-           <div class="form-group">
-               <button type="submit">Simpan Perubahan</button>
-               <a href="buku.php" class="btn-cancel">Batal</a>
-           </div>
+<div class="container">
+    <h2>Edit Buku</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+        <div class="form-group">
+            <label>Judul Buku:</label>
+            <input type="text" 
+                   name="judul" 
+                   value="<?php echo isset($buku['judul_buku']) ? htmlspecialchars($buku['judul_buku']) : ''; ?>"
+                   required>
+        </div>
+        <div class="form-group">
+            <label>Deskripsi:</label>
+            <textarea name="deskripsi" required><?php echo isset($buku['deskripsi']) ? htmlspecialchars($buku['deskripsi']) : ''; ?></textarea>
+        </div>
+        <div class="form-group">
+            <label>Harga:</label>
+            <input type="number" 
+                   name="harga" 
+                   value="<?php echo isset($buku['harga']) ? htmlspecialchars($buku['harga']) : ''; ?>"
+                   required>
+        </div>
+        <div class="form-group">
+            <label>Stok:</label>
+            <input type="number" 
+                   name="stok" 
+                   value="<?php echo isset($buku['stok']) ? htmlspecialchars($buku['stok']) : ''; ?>"
+                   required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Simpan Perubahan</button>
+            <a href="<?php echo htmlspecialchars('buku.php'); ?>" class="btn-cancel">Batal</a>
+        </div>
+    </form>
+</div>
        </form>
    </div>
 </body>
