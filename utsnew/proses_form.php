@@ -1,13 +1,15 @@
 <?php
+// Memeriksa apakah metode request yang digunakan adalah POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mengambil data dari form
+    // Mengambil data dari form menggunakan metode POST
+    // htmlspecialchars() digunakan untuk menghindari serangan XSS dengan mengonversi karakter spesial HTML
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $alamat = htmlspecialchars($_POST['alamat']);
     $product = htmlspecialchars($_POST['product']);
-    $quantity = isset($_POST['quantity']) ? (int) htmlspecialchars($_POST['quantity']) : 0; // Default ke 0 jika tidak ada
+    $quantity = isset($_POST['quantity']) ? (int) htmlspecialchars($_POST['quantity']) : 0; // Mengambil nilai jumlah, jika tidak ada diatur ke 0
 
-    // Daftar produk dan harganya
+    // Daftar harga produk sesuai dengan jenisnya (beli atau sewa)
     $product_prices = [
         'ps3' => 1500000,
         'ps4' => 3000000,
@@ -17,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'sewa_ps5' => 10000
     ];
 
+    // Daftar nama produk untuk ditampilkan dalam konfirmasi pesanan
     $product_names = [
         'ps3' => 'PlayStation 3',
         'ps4' => 'PlayStation 4',
@@ -26,21 +29,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'sewa_ps5' => 'Sewa PlayStation 5'
     ];
 
-    // Menghitung total biaya
-    $total_cost = ($product == 'sewa_ps3' || $product == 'sewa_ps4' || $product == 'sewa_ps5') ? $quantity * $product_prices[$product] : $product_prices[$product];
+    // Menghitung total biaya pesanan
+    // Jika produk sewa dipilih, biaya dihitung berdasarkan lama peminjaman (quantity * harga per jam)
+    // Jika produk pembelian dipilih, langsung menggunakan harga produk
+    $total_cost = ($product == 'sewa_ps3' || $product == 'sewa_ps4' || $product == 'sewa_ps5')
+    ? $quantity * $product_prices[$product] : $product_prices[$product];
+    
+    // Mendapatkan nama produk dari daftar nama produk
     $product_name = $product_names[$product];
 
-    // Konfirmasi pesanan
+    // Menampilkan konfirmasi pesanan dalam bentuk HTML
     echo "<!DOCTYPE html>
         <h1>Terima Kasih, $name!</h1>";
 
-    // Menampilkan informasi pemesanan sesuai dengan jenis produk
+    // Jika produk yang dipilih adalah sewa, tampilkan pesan pemesanan sewa
     if (strpos($product, 'sewa_') === 0) {
         echo "<p>Pemesanan Anda untuk $quantity jam $product_name telah diterima.</p>";
     } else {
+        // Jika produk yang dipilih adalah pembelian, tampilkan pesan pembelian
         echo "<p>Pembelian Anda untuk $product_name telah diterima.</p>";
     }
 
+    // Menampilkan informasi total biaya, email, dan alamat pengiriman
     echo "<p>Total biaya: Rp" . number_format($total_cost, 0, ',', '.') . "</p>
           <p>Email: $email</p>
           <p>Alamat Pengiriman: $alamat</p>

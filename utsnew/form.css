@@ -6,6 +6,7 @@ body {
     color: #a8b3cf;
 }
 
+/* Styling untuk header, mencakup warna latar belakang, teks, dan garis bawah */
 header {
     background-color: rgba(18, 22, 33, 0.95);
     padding: 20px;
@@ -14,6 +15,7 @@ header {
     border-bottom: 3px solid #4f46e5;
 }
 
+/* Styling untuk heading h1 dan h2 dengan bayangan teks */
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -21,6 +23,7 @@ h1, h2 {
     text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
 }
 
+/* Container untuk form, mengatur lebar maksimum, dan efek bayangan */
 .container-form {
     max-width: 600px;
     margin: 50px auto;
@@ -31,6 +34,7 @@ h1, h2 {
     border: 1px solid rgba(79, 70, 229, 0.2);
 }
 
+/* Styling untuk label form */
 form label {
     display: block;
     font-weight: 500;
@@ -38,6 +42,7 @@ form label {
     color: #e4e4e4;
 }
 
+/* Styling untuk input teks, email, angka, textarea, dan select */
 form input[type="text"],
 form input[type="email"],
 form input[type="number"],
@@ -53,22 +58,25 @@ form select {
     transition: all 0.3s ease;
 }
 
+/* Efek fokus untuk elemen input */
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="number"]:focus,
 form textarea:focus,
 form select:focus {
-    outline: none;
+    outline: none; /* Menghilangkan outline default */
     border-color: #4f46e5;
     box-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
     background-color: rgba(18, 22, 33, 0.9);
 }
 
+/* textarea agar tinggi dan mencegah resize */
 form textarea {
     height: 100px;
     resize: none;
 }
 
+/* Styling untuk tombol submit */
 form input[type="submit"] {
     background: linear-gradient(135deg, #4f46e5, #3730a3);
     color: white;
@@ -85,34 +93,39 @@ form input[type="submit"] {
     margin: 0 auto;
 }
 
+/* Efek hover untuk tombol submit */
 form input[type="submit"]:hover {
     background: linear-gradient(135deg, #3730a3, #312e81);
     box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
     transform: translateY(-2px);
 }
 
-
+/* Styling untuk placeholder teks dalam input */
 ::placeholder {
     color: #8892b0;
 }
 
+/* Styling untuk opsi dalam dropdown select */
 form select option {
     background-color: #1a1d2b;
     color: #e4e4e4;
 }
 
+/* Styling responsif untuk perangkat dengan lebar kurang dari 600px */
 @media (max-width: 600px) {
     .container-form {
         padding: 20px;
         margin: 20px;
     }
 
+    /* Tombol submit melebar penuh pada layar kecil */
     form input[type="submit"] {
         width: 100%;
         padding: 14px;
     }
 }
 
+/* Styling untuk footer */
 footer {
     background-color: rgba(18, 22, 33, 0.95);
     color: #a8b3cf;

@@ -6,13 +6,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #e4e4e4;
     line-height: 1.5;
     position: relative;
     z-index: 1;
 }
 
+/* Layer overlay hitam semi-transparan di atas background */
 body::before {
     content: "";
     position: fixed;
@@ -24,6 +24,7 @@ body::before {
     z-index: -1;
 }
 
+/* Bagian header untuk navigasi dan logo */
 header {
     background-color: rgba(18, 22, 33, 0.95);
     padding: 20px;
@@ -31,12 +32,14 @@ header {
     border-bottom: 3px solid #4f46e5;
 }
 
+/* Styling untuk heading (h1 dan h2) */
 h1, h2 {
     text-align: center;
     color: #4f46e5;
     text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
 }
 
+/* Styling khusus untuk h2 di bagian home */
 .home-content h2 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -44,17 +47,20 @@ h1, h2 {
     text-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
 }
 
+/* Styling untuk paragraf dalam home-content */
 .home-content p {
     font-size: 1.5rem;
     color: #a8b3cf;
 }
 
+/* Container utama yang mengatur lebar maksimum dan sentralisasi konten */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Layout untuk daftar produk */
 .product-list {
     display: flex;
     justify-content: space-around;
@@ -62,6 +68,7 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
+/* Styling untuk setiap item produk */
 .product-item {
     border: 1px solid rgba(79, 70, 229, 0.2);
     padding: 20px;
@@ -74,11 +81,13 @@ h1, h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efek hover pada item produk */
 .product-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(79, 70, 229, 0.25);
 }
 
+/* Styling untuk gambar produk */
 .product-image {
     width: 150px;
     height: auto;
@@ -87,6 +96,7 @@ h1, h2 {
     filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.3));
 }
 
+/* Styling tombol pemesanan */
 .order-button {
     display: block;
     text-align: center;
@@ -103,19 +113,24 @@ h1, h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efek hover pada tombol pemesanan */
 .order-button:hover {
     background: linear-gradient(135deg, #3730a3, #312e81);
     box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
 
+/* Efek klik pada tombol */
 .order-button:active {
     transform: scale(0.98);
     box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
 }
+
+/* Styling paragraf di bagian kontak */
 #contact .contact-info p {
     color: #a8b3cf;
 }
 
+/* Styling untuk footer */
 footer {
     background-color: rgba(18, 22, 33, 0.95);
     color: #a8b3cf;

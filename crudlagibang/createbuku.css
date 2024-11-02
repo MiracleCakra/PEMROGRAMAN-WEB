@@ -1,0 +1,125 @@
+/* Container form */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fefae0; /* Latar cream lembut */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(188, 108, 37, 0.1); /* Bayangan halus */
+}
+
+/* Judul form */
+h2 {
+    text-align: center; /* Pusatkan teks */
+    color: #8b4513; /* Coklat hangat */
+    margin-bottom: 30px;
+    font-weight: 700;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Grup form untuk setiap elemen input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label input */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #5c4033; /* Warna coklat gelap */
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* Input teks dan angka */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddb892; /* Border coklat muda */
+    border-radius: 5px;
+    background-color: #fff8e7; /* Latar cream sangat muda */
+    color: #5c4033;
+    font-size: 0.9em;
+    transition: border-color 0.3s; /* Efek transisi pada border */
+}
+
+/* Fokus pada input */
+input:focus,
+textarea:focus {
+    border-color: #bc6c25; /* Warna coklat hangat saat fokus */
+    outline: none; /* Hilangkan garis luar default */
+}
+
+/* Tombol submit */
+button[type="submit"] {
+    background-color: #606c38; /* Hijau gelap */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s; /* Efek hover */
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px); /* Efek naik saat hover */
+}
+
+/* Tombol batal */
+.btn-cancel {
+    background-color: #bc6c25; /* Warna coklat kemerahan */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel:hover {
+    background-color: #8b4513; /* Coklat lebih gelap saat hover */
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #b8a99a; /* Warna placeholder */
+    opacity: 0.7;
+}
+
+/* Pesan sukses dan error */
+.success-message,
+.error-message {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    background-color: #dde5b6; /* Latar hijau muda */
+    color: #3a5a40; /* Teks hijau gelap */
+}
+
+.error-message {
+    background-color: #ffd7ba; /* Latar oranye muda */
+    color: #bc6c25; /* Teks coklat kemerahan */
+}
+
+/* Responsif untuk perangkat kecil */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button[type="submit"],
+    .btn-cancel {
+        width: 100%; /* Lebar penuh untuk tombol */
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
