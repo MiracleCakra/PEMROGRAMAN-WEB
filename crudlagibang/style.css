@@ -1,22 +1,22 @@
 /* Mengatur dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fff5e6; /* Warna latar belakang cream hangat */
+    background-color: #fff5e6;
     margin: 0;
     padding: 20px;
-    color: #4a4a4a; /* Warna teks lembut */
-    line-height: 1.6; /* Jarak antar baris */
+    color: #4a4a4a;
+    line-height: 1.6;
 }
 
 /* Gaya untuk judul halaman */
 h2 {
     text-align: center;
-    color: #8b4513; /* Warna coklat hangat */
+    color: #8b4513;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #90917e; /* Bayangan keemasan halus */
+    text-shadow: 0 0 5px #90917e;
 }
 
 /* Pengaturan tabel dasar */
@@ -28,39 +28,39 @@ table {
 
 /* Header tabel */
 thead {
-    background-color: #d4a373; /* Warna coklat muda */
+    background-color: #d4a373;
 }
 
 thead th {
     text-transform: uppercase;
     font-weight: 600;
     padding: 12px;
-    color: #ffffff; /* Warna teks kontras */
+    color: #ffffff;
     font-size: 0.9em;
     text-align: left;
 }
 
 /* Baris tabel */
 tbody tr {
-    background-color: #fefae0; /* Warna latar cream muda */
-    border-left: 4px solid #bc6c25; /* Garis coklat di sisi kiri */
-    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi */
+    background-color: #fefae0;
+    border-left: 4px solid #bc6c25;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 tbody tr:hover {
     transform: scale(1.01); /* Sedikit membesar saat hover */
-    box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2); /* Bayangan halus */
+    box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2);
 }
 
 tbody td {
     padding: 15px;
-    border-top: 1px solid #ddb892; /* Garis pemisah lembut */
-    color: #5c4033; /* Teks coklat gelap */
+    border-top: 1px solid #ddb892; /* Garis pemisah */
+    color: #5c4033;
 }
 
 /* Kolom aksi dengan tombol */
 .actions {
-    text-align: center; /* Meratakan tombol aksi di tengah */
+    text-align: center;
 }
 
 /* Tombol aksi (edit, delete, tambah) */
@@ -76,22 +76,22 @@ tbody td {
 }
 
 .btn-edit {
-    background-color: #588157; /* Hijau olive */
-    color: #ffffff; /* Warna teks putih */
+    background-color: #588157;
+    color: #ffffff;
 }
 
 .btn-delete {
-    background-color: #bc6c25; /* Coklat kemerahan */
-    color: #ffffff; /* Warna teks putih */
+    background-color: #bc6c25;
+    color: #ffffff;
 }
 
 .button-add-buku {
-    background-color: #606c38; /* Hijau gelap */
-    color: #ffffff; /* Warna teks putih */
-    display: block; /* Menjadikan tombol sebagai blok */
-    width: 180px; /* Lebar tombol */
-    margin: 20px auto; /* Margin otomatis untuk rata tengah */
-    text-align: center; /* Rata tengah teks */
+    background-color: #606c38;
+    color: #ffffff;
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .btn-edit:hover, .btn-delete:hover, .button-add-buku:hover {
@@ -101,15 +101,15 @@ tbody td {
 /* Responsif untuk perangkat kecil */
 @media screen and (max-width: 600px) {
     table {
-        font-size: 14px; /* Ukuran font lebih kecil */
+        font-size: 14px;
     }
     thead th, tbody td {
-        padding: 10px; /* Padding lebih kecil */
+        padding: 10px;
     }
     .button-add-buku {
-        width: 150px; /* Lebar tombol lebih kecil */
+        width: 150px;
     }
     h2 {
-        font-size: 1.4em; /* Ukuran font judul lebih kecil */
+        font-size: 1.4em;
     }
 }

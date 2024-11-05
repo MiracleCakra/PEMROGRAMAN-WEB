@@ -3,15 +3,15 @@ form {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #fefae0; /* Latar cream lembut */
+    background-color: #fefae0;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(188, 108, 37, 0.1); /* Bayangan halus */
+    box-shadow: 0 3px 10px rgba(188, 108, 37, 0.1);
 }
 
 /* Judul form */
 h2 {
-    text-align: center; /* Pusatkan teks */
-    color: #8b4513; /* Coklat hangat */
+    text-align: center;
+    color: #8b4513;
     margin-bottom: 30px;
     font-weight: 700;
     padding: 15px;
@@ -28,7 +28,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #5c4033; /* Warna coklat gelap */
+    color: #5c4033;
     font-weight: 600;
     font-size: 0.9em;
 }
@@ -39,9 +39,9 @@ input[type="number"],
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddb892; /* Border coklat muda */
+    border: 1px solid #ddb892;
     border-radius: 5px;
-    background-color: #fff8e7; /* Latar cream sangat muda */
+    background-color: #fff8e7;
     color: #5c4033;
     font-size: 0.9em;
     transition: border-color 0.3s; /* Efek transisi pada border */
@@ -50,13 +50,13 @@ textarea {
 /* Fokus pada input */
 input:focus,
 textarea:focus {
-    border-color: #bc6c25; /* Warna coklat hangat saat fokus */
+    border-color: #bc6c25;
     outline: none; /* Hilangkan garis luar default */
 }
 
 /* Tombol submit */
 button[type="submit"] {
-    background-color: #606c38; /* Hijau gelap */
+    background-color: #606c38;
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -72,22 +72,22 @@ button[type="submit"]:hover {
 
 /* Tombol batal */
 .btn-cancel {
-    background-color: #bc6c25; /* Warna coklat kemerahan */
+    background-color: #bc6c25;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none; /* Hilangkan garis bawah */
+    text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s;
 }
 
 .btn-cancel:hover {
-    background-color: #8b4513; /* Coklat lebih gelap saat hover */
+    background-color: #8b4513;
 }
 
 /* Placeholder styling */
 ::placeholder {
-    color: #b8a99a; /* Warna placeholder */
+    color: #b8a99a;
     opacity: 0.7;
 }
 
@@ -101,13 +101,13 @@ button[type="submit"]:hover {
 }
 
 .success-message {
-    background-color: #dde5b6; /* Latar hijau muda */
-    color: #3a5a40; /* Teks hijau gelap */
+    background-color: #dde5b6;
+    color: #3a5a40;
 }
 
 .error-message {
-    background-color: #ffd7ba; /* Latar oranye muda */
-    color: #bc6c25; /* Teks coklat kemerahan */
+    background-color: #ffd7ba;
+    color: #bc6c25;
 }
 
 /* Responsif untuk perangkat kecil */

@@ -1,9 +1,7 @@
 <?php
-require_once("connect.php");                                     // Mengimpor file koneksi database
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {                      // Cek apakah form disubmit dengan metode POST
+require_once("connect.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
    try {
-       // Query SQL untuk menyisipkan data buku baru ke tabel
        $sql = "INSERT INTO penjualan_buku (judul_buku, deskripsi, harga, stok)
                VALUES (:judul, :deskripsi, :harga, :stok)";
        $stmt = $conn->prepare($sql);                           // Mempersiapkan query dengan prepared statement
