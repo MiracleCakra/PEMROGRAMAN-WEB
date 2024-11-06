@@ -47,8 +47,8 @@ if ($stmt === false) {
                 <td><?php echo htmlspecialchars(number_format($row['harga'], 0, ',', '.')); ?></td>
                 <td><?php echo htmlspecialchars($row['stok']); ?></td>
                 <td class="Format Buku">
-                    <a href="editbuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>" class="btn-edit">Edit</a>
-                    <a href="hapusbuku.php?id=<?php echo htmlspecialchars($row['id_buku'] ); ?>" class="btn-delete"
+                <a href="updatebuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>" class="btn-update">Update</a>
+                <a href="hapusbuku.php?id=<?php echo htmlspecialchars($row['id_buku'] ); ?>" class="btn-delete"
                     onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</a>
                 </td>
             </tr>

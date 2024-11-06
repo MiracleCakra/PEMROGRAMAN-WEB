@@ -1,16 +1,16 @@
 <?php
 require_once("connect.php");
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {  //membuat buku baru
    try {
        $sql = "INSERT INTO penjualan_buku (judul_buku, deskripsi, harga, stok)
                VALUES (:judul, :deskripsi, :harga, :stok)";
-       $stmt = $conn->prepare($sql);                           // Mempersiapkan query dengan prepared statement
+       $stmt = $conn->prepare($sql);                         // Mempersiapkan query dengan prepared statement
        
        // Binding parameter form ke query untuk mencegah SQL injection
        $stmt->bindParam('judul', $_POST['judul']);             // Binding input judul (mengikat pernyataan ke dalam sql)
-       $stmt->bindParam(':deskripsi', $_POST['deskripsi']);    // Binding input deskripsi
-       $stmt->bindParam(':harga', $_POST['harga']);            // Binding input harga
-       $stmt->bindParam(':stok', $_POST['stok']);              // Binding input stok
+       $stmt->bindParam(':deskripsi', $_POST['deskripsi']);
+       $stmt->bindParam(':harga', $_POST['harga']);
+       $stmt->bindParam(':stok', $_POST['stok']);
        
        $stmt->execute();                                       // Mengeksekusi query insert
        

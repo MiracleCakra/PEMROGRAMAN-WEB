@@ -64,7 +64,7 @@ tbody td {
 }
 
 /* Tombol aksi (edit, delete, tambah) */
-.btn-edit, .btn-delete, .button-add-buku {
+.btn-update, .btn-delete, .button-add-buku {
     padding: 8px 15px; /* Ukuran tombol */
     border-radius: 5px; /* Sudut membulat */
     font-weight: 600; /* Teks tebal */
@@ -75,7 +75,7 @@ tbody td {
     text-decoration: none; /* Hilangkan garis bawah */
 }
 
-.btn-edit {
+.btn-update {
     background-color: #588157;
     color: #ffffff;
 }
@@ -94,10 +94,9 @@ tbody td {
     text-align: center;
 }
 
-.btn-edit:hover, .btn-delete:hover, .button-add-buku:hover {
+.btn-update:hover, .btn-delete:hover, .button-add-buku:hover {
     transform: translateY(-3px); /* Efek naik saat hover */
 }
-
 /* Responsif untuk perangkat kecil */
 @media screen and (max-width: 600px) {
     table {

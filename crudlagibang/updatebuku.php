@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            $id
        ]);
        
-       header("Location: buku.php");// Redirect ke halaman daftar buku setelah update
+       header("Location:buku.php");// Redirect ke halaman daftar buku setelah update
        exit();
    } catch(PDOException $e) {// Menangkap error database
        echo "Error: " . $e->getMessage();
@@ -57,12 +57,12 @@ try {
 <html lang="id">
 <head>
    <meta charset="UTF-8">
-   <title>Edit Buku</title>
-   <link rel="stylesheet" href="editbuku.css">
+   <title>Update Buku</title>
+   <link rel="stylesheet" href="updatebuku.css">
 </head>
 <body>
 <div class="container">
-    <h2>Edit Buku</h2>
+    <h2>Update Buku</h2>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $id); ?>">
         <div class="form-group">
             <label>Judul Buku:</label>
