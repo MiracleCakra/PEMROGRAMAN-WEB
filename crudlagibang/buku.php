@@ -10,7 +10,7 @@ $stmt = $conn->query($sql);
 // Melakukan pengecekan apakah query berhasil dieksekusi
 if ($stmt === false) {
     // Jika query gagal, tampilkan pesan error dan informasi detail kesalahan
-    die("Query failed: " . print_r($conn->errorInfo(), true));
+    die("Query failed: " . print_r($conn->errorInfo(), true)); // mencetak error yang ada pada array
 }
 ?>
 
