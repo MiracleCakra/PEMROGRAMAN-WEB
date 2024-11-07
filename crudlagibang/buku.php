@@ -40,7 +40,7 @@ if ($stmt === false) {
     </thead>
     <tbody>
         <!-- Loop untuk menampilkan setiap baris data dari database -->
-        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?> <!--Mengambil semua hasil query dalam bentuk array asosiatif untuk digunakan pada tampilan halaman.-->
             <tr>
                 <td><?php echo htmlspecialchars($row['judul_buku']); ?></td>
                 <td><?php echo htmlspecialchars($row['deskripsi']); ?></td>
