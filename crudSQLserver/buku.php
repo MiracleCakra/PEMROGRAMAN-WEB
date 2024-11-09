@@ -44,10 +44,10 @@ if ($result === false) {                 // Jika query gagal dieksekusi
                 <!-- Kolom aksi dengan tombol Update dan Hapus -->
                 <td class="Format Buku">
                     <!-- Link untuk update dengan parameter id_buku -->
-                    <a href="updatebuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>" 
+                    <a href="updatebuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>"
                        class="btn-update">Update</a>
                     <!-- Link untuk hapus dengan konfirmasi -->
-                    <a href="hapusbuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>" 
+                    <a href="hapusbuku.php?id=<?php echo htmlspecialchars($row['id_buku']); ?>"
                        class="btn-delete"
                        onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</a>
                 </td>
