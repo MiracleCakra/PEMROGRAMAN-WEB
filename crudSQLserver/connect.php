@@ -1,9 +1,9 @@
 <?php
 // Nama server, basis data, dan kredensial login
-$servername = "CAKRA\SERVERPHP"; // Pastikan Anda menggunakan dua backslashes
+$servername = "CAKRA\SERVERPHP";
 $database = "CRUDBUKU";
-$username = ""; // Ganti dengan username SQL Server Anda
-$password = ""; // Ganti dengan password SQL Server Anda
+$username = "";
+$password = "";
 
 // Membuat koneksi ke SQL Server menggunakan SQLSRV
 $conn = sqlsrv_connect($servername, array(
