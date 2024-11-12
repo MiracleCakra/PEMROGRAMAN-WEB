@@ -1,29 +1,29 @@
 /* Mengatur dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fff5e6;
-    margin: 0;
-    padding: 20px;
-    color: #4a4a4a;
-    line-height: 1.6;
+    background-color: #fff5e6;        /* Warna latar belakang */
+    margin: 0;                          /* Menghilangkan margin default */
+    padding: 20px;                      /* Memberi ruang 20px di sekeliling konten */
+    color: #4a4a4a;                   /* Warna teks */
+    line-height: 1.6;                   /* Jarak antar baris teks 1.6 kali ukuran font */
 }
 
 /* Gaya untuk judul halaman */
 h2 {
-    text-align: center;
+    text-align: center;                 /* Posisi teks di tengah */
     color: #8b4513;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 5px #90917e;
+    margin-bottom: 20px;                /* Jarak bawah 20px */
+    font-weight: 700;                   /* Ketebalan font (bold) */
+    text-transform: uppercase;          /* Mengubah teks menjadi huruf kapital */
+    letter-spacing: 2px;                /* Jarak antar huruf 2px */
+    text-shadow: 0 0 5px #90917e;     /* Efek bayangan teks */
 }
 
 /* Pengaturan tabel dasar */
 table {
-    width: 100%;
-    border-collapse: collapse; /* Hilangkan jarak antar border */
-    margin-top: 20px;
+    width: 100%;                        /* Lebar tabel penuh */
+    border-collapse: collapse;          /* Menggabungkan border sel yang berdekatan */
+    margin-top: 20px;                   /* Jarak atas tabel 20px */
 }
 
 /* Header tabel */
@@ -33,28 +33,28 @@ thead {
 
 thead th {
     text-transform: uppercase;
-    font-weight: 600;
-    padding: 12px;
+    font-weight: 600;                   /* Ketebalan font semi-bold */
+    padding: 12px;                      /* Ruang dalam sel 12px */
     color: #ffffff;
-    font-size: 0.9em;
+    font-size: 0.9em;                   /* Ukuran font 90% dari ukuran normal */
     text-align: left;
 }
 
 /* Baris tabel */
 tbody tr {
     background-color: #fefae0;
-    border-left: 4px solid #bc6c25;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #bc6c25;     /* Garis tepi kiri */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animasi saat hover */
 }
 
 tbody tr:hover {
-    transform: scale(1.01); /* Sedikit membesar saat hover */
-    box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2);
+    transform: scale(1.01);             /* Membesar 1% saat di-hover */
+    box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2); /* Bayangan saat hover */
 }
 
 tbody td {
-    padding: 15px;
-    border-top: 1px solid #ddb892; /* Garis pemisah */
+    padding: 15px;                        /* Ruang dalam sel 15px */
+    border-top: 1px solid #ddb892;      /* Garis pemisah antar baris */
     color: #5c4033;
 }
 
@@ -65,12 +65,12 @@ tbody td {
 
 /* Tombol aksi (edit, delete, tambah) */
 .btn-update, .btn-delete, .button-add-buku {
-    padding: 8px 15px; /* Ukuran tombol */
-    border-radius: 5px; /* Sudut membulat */
-    font-weight: 600; /* Teks tebal */
+    padding: 8px 15px;         /* Ukuran tombol */
+    border-radius: 5px;        /* Sudut membulat */
+    font-weight: 600;          /* Teks tebal */
     text-transform: uppercase; /* Huruf kapital */
-    border: none; /* Hilangkan border */
-    cursor: pointer; /* Mengubah kursor saat hover */
+    border: none;              /* Hilangkan border */
+    cursor: pointer;           /* Mengubah kursor saat hover */
     transition: transform 0.3s; /* Efek transisi saat hover */
     text-decoration: none; /* Hilangkan garis bawah */
 }
@@ -97,18 +97,19 @@ tbody td {
 .btn-update:hover, .btn-delete:hover, .button-add-buku:hover {
     transform: translateY(-3px); /* Efek naik saat hover */
 }
+
 /* Responsif untuk perangkat kecil */
 @media screen and (max-width: 600px) {
     table {
-        font-size: 14px;
+        font-size: 14px;               /* Ukuran font lebih kecil */
     }
-    thead th, tbody td {
+    thead th, tbody td {               /* Padding sel lebih kecil */
         padding: 10px;
     }
     .button-add-buku {
-        width: 150px;
+        width: 150px;                  /* Tombol tambah lebih kecil */
     }
     h2 {
-        font-size: 1.4em;
+        font-size: 1.4em;              /* Judul lebih kecil */
     }
 }

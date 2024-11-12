@@ -4,6 +4,7 @@ require_once("connect.php");
 
 // Membuat query SQL untuk mengambil seluruh data dari tabel penjualan_buku
 $sql = "SELECT * FROM penjualan_buku";
+
 // Mengeksekusi query SQL dan menyimpan hasilnya dalam variabel $stmt
 $stmt = $conn->query($sql);
 
