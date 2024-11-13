@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 try {
    // Query untuk mengambil data buku berdasarkan id
    $stmt = $conn->prepare("SELECT * FROM penjualan_buku WHERE id_buku = ?");
-   $stmt->execute([$id]); // Eksekusi query dengan parameter id
+   $stmt->execute([$id]);                  // Eksekusi query dengan parameter id
    $buku = $stmt->fetch(PDO::FETCH_ASSOC); // Ambil data buku dalam bentuk array asosiatif
    
    // Jika buku tidak ditemukan, redirect ke halaman daftar buku
@@ -63,7 +63,7 @@ try {
 <body>
 <div class="container">
     <h2>Update Buku</h2>
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $id); ?>">
+    <form method="POST" action="updatebuku.php?id=<?php echo htmlspecialchars($id); ?>">
         <div class="form-group">
             <label>Judul Buku:</label>
             <input type="text"
