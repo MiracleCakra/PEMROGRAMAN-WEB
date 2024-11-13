@@ -1,7 +1,7 @@
 <?php
 require_once("connect.php");
 
-// Memeriksa apakah ada ID yang dikirim
+// Memeriksa apakah ada parameter id
 if (!isset($_GET['id'])) {
     header("Location: buku.php");
     exit();

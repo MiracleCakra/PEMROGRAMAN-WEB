@@ -7,7 +7,7 @@ if (!isset($_GET['id'])) {
    exit();
 }
 
-$id = $_GET['id'];// Mengambil id buku dari URL
+$id = $_GET['id'];// Mengambil id buku dari URL dan menyimpan kedalam variabel $id
 
 // Proses update data ketika form disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -44,7 +44,7 @@ try {
    $buku = $stmt->fetch(PDO::FETCH_ASSOC); // Ambil data buku dalam bentuk array asosiatif
    
    // Jika buku tidak ditemukan, redirect ke halaman daftar buku
-   if (!$buku) {
+   if (!$buku) { // memeriksa apakah data pada buku false ataupun null
        header("Location: buku.php");
        exit();
    }
