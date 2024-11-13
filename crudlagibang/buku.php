@@ -60,9 +60,8 @@ if ($stmt === false) {
     </tbody>
     </table>
     <?php
-    // Membersihkan resource dengan menutup statement dan koneksi database
-    $stmt = null;
-    $conn = null;
+    $stmt = null;  // Menghentikan penggunaan statement PDO.
+    $conn = null;  // Menghentikan koneksi PDO dengan database.
     ?>
     <!-- Tombol untuk menambah data buku baru -->
     <a href="createbuku.php" class="button button-add-buku">Tambah Buku</a>
