@@ -1,7 +1,7 @@
 <?php
 require_once("connect.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  //membuat buku baru dengan langsung berupa data dan akan dieksekusi jika form telah disubmit dengan metode POST
-   try { // Mempersiapkan query SQL untuk menambahkan data buku ke dalam tabel 'penjualan_buku'.
+   try {                                     // Mempersiapkan query SQL untuk menambahkan data buku ke dalam tabel 'penjualan_buku'.
        $sql = "INSERT INTO penjualan_buku (judul_buku, deskripsi, harga, stok)
                VALUES (:judul, :deskripsi, :harga, :stok)";
        $stmt = $conn->prepare($sql);                          // Mempersiapkan query SQL untuk dieksekusi dengan parameter yang diikat.
