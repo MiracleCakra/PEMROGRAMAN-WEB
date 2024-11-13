@@ -43,9 +43,9 @@ try {
    $stmt->execute([$id]);                  // Eksekusi query dengan parameter id
    $buku = $stmt->fetch(PDO::FETCH_ASSOC); // Ambil data buku dalam bentuk array asosiatif
    
-   // Jika buku tidak ditemukan, redirect ke halaman daftar buku
+   // Memeriksa apakah data buku ditemukan
    if (!$buku) { // memeriksa apakah data pada buku false ataupun null
-       header("Location: buku.php");
+       header("Location: buku.php"); // Jika buku tidak ditemukan, redirect ke halaman daftar buku
        exit();
    }
 } catch(PDOException $e) {// Menangkap error database
