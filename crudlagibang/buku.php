@@ -31,7 +31,7 @@ if ($stmt === false) {
     <thead>
         <!-- Header tabel yang mendefinisikan kolom-kolom -->
         <tr>
-
+            <th>No</th>
             <th>Judul Buku</th>
             <th>Deskripsi</th>
             <th>Harga</th>
@@ -41,8 +41,11 @@ if ($stmt === false) {
     </thead>
     <tbody>
         <!-- Loop untuk menampilkan setiap baris data dari database -->
-        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?> <!--Mengambil semua hasil query dalam bentuk array asosiatif untuk digunakan pada tampilan halaman.-->
+        <?php
+        $no = 1;
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?> <!--Mengambil semua hasil query dalam bentuk array asosiatif untuk digunakan pada tampilan halaman.-->
             <tr>
+                <td><?php echo $no++; ?></td>
                 <td><?php echo htmlspecialchars($row['judul_buku']); ?></td>
                 <td><?php echo htmlspecialchars($row['deskripsi']); ?></td>
                 <td><?php echo htmlspecialchars(number_format($row['harga'], 0, ',', '.')); ?></td>
