@@ -13,3 +13,5 @@ try {
 } catch (PDOException $e) {
     die("Koneksi gagal: " . $e->getMessage()); // Jika koneksi gagal, tampilkan pesan kesalahan dan hentikan skrip
 }
+
+?>
