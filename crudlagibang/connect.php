@@ -11,6 +11,5 @@ try {
     // Memberikan atribut error mode ke ERRMODE_EXCEPTION agar PDO melempar exception jika terjadi kesalahan
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Jika koneksi gagal, tampilkan pesan kesalahan dan hentikan skrip
-    die("Koneksi gagal: " . $e->getMessage());
+    die("Koneksi gagal: " . $e->getMessage()); // Jika koneksi gagal, tampilkan pesan kesalahan dan hentikan skrip
 }
