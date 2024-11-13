@@ -1,11 +1,11 @@
 <?php
-// Mengimpor file connect.php yang berisi konfigurasi koneksi database
+// Mengimpor file connect.php yang berisi konfigurasi koneksi database dalam 1 kali tampilan
 require_once("connect.php");
 
 // Membuat query SQL untuk mengambil seluruh data dari tabel penjualan_buku
 $sql = "SELECT * FROM penjualan_buku";
 
-// Mengeksekusi query SQL dan menyimpan hasilnya dalam variabel $stmt
+// Mengeksekusi langsung pada query SQL dan menyimpan hasilnya dalam variabel $stmt
 $stmt = $conn->query($sql);
 
 // Melakukan pengecekan apakah query berhasil dieksekusi
