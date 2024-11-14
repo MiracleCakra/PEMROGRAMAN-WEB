@@ -18,7 +18,6 @@ if ($stmt === false) {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Mengatur encoding karakter menggunakan UTF-8 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Buku</title>
@@ -29,7 +28,6 @@ if ($stmt === false) {
     <h2>LIST PENJUALAN BUKU</h2>
     <table>
     <thead>
-        <!-- Header tabel yang mendefinisikan kolom-kolom -->
         <tr>
             <th>No</th>
             <th>Judul Buku</th>
@@ -63,7 +61,6 @@ if ($stmt === false) {
     $stmt = null;  // Menghentikan penggunaan statement PDO.
     $conn = null;  // Menghentikan koneksi PDO dengan database.
     ?>
-    <!-- Tombol untuk menambah data buku baru -->
     <a href="createbuku.php" class="button button-add-buku">Tambah Buku</a>
 </body>
 </html>
