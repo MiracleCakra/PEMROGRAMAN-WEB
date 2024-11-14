@@ -40,10 +40,10 @@ if ($stmt === false) {
         </tr>
     </thead>
     <tbody>
-        <!-- Loop untuk menampilkan setiap baris data dari database -->
+        <!-- Loop untuk mengambil data dari database baris per baris -->
         <?php
         $no = 1;
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?> <!--Mengambil semua hasil query dalam bentuk array asosiatif untuk digunakan pada tampilan halaman.-->
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?> <!--mengambil data dalam bentuk array asosiatif (menggunakan nama kolom sebagai key)-->
             <tr>
                 <td><?php echo $no++; ?></td>
                 <td><?php echo htmlspecialchars($row['judul_buku']); ?></td>

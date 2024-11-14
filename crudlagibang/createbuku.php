@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {  //membuat buku baru dengan langsung
        $stmt = $conn->prepare($sql);                          // Mempersiapkan query SQL untuk dieksekusi dengan parameter yang diikat.
        
        // Binding parameter form ke query untuk mencegah SQL injection
-       $stmt->bindParam('judul', $_POST['judul']);             // Binding input judul (mengikat pernyataan ke dalam sql)
+       $stmt->bindParam('judul', $_POST['judul']);             // mengikat pernyataan parameter dari form ke dalam sql
        $stmt->bindParam(':deskripsi', $_POST['deskripsi']);
        $stmt->bindParam(':harga', $_POST['harga']);
        $stmt->bindParam(':stok', $_POST['stok']);

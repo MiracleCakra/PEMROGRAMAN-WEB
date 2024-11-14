@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                stok = ?
                WHERE id_buku = ?";
        
-       $stmt = $conn->prepare($sql);
+       $stmt = $conn->prepare($sql); //untuk update data buku
        $stmt->execute([
            $_POST['judul'],
            $_POST['deskripsi'],
